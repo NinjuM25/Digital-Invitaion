@@ -1,0 +1,115 @@
+body {
+    font-family: sans-serif;
+    background-color: #ffebee; /* Soft pink background as fallback */
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Allow positioning of children */
+}
+
+header, footer {
+    background-color: #ffcc80; /* Light orange header and footer */
+    color: #000000; /* Black text */
+    padding: 2rem;
+    border-bottom: 5px solid #ff9800; /* Orange bottom border for header */
+}
+
+/* Media query to center the header on small screens */
+@media (max-width: 600px) {
+    header h1 {
+        text-align: center; /* Center the header text */
+    }
+}
+
+section {
+    margin: 2rem 0;
+    position: relative; /* Keep section relative for z-index */
+    z-index: 0; /* Ensure sections are behind the image */
+}
+
+/* Event Details Section */
+#details {
+    background-image: url('crown.jpg'); /* Set the crown image as the background */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the image */
+    padding: 2rem; /* Adjust padding */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 60%; /* Set the width to 60% of the container */
+    max-width: 400px; /* Limit max width for larger screens */
+    min-height: 300px; /* Set a minimum height */
+    margin: 1rem auto; /* Center the section */
+    color: #ffffff; /* White text for better contrast */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+    animation: slideIn 0.5s ease forwards; /* Animation for entrance */
+}
+
+/* Countdown Section */
+#countdown {
+    background-image: url('car-1.jpg'); /* Set the car image as the background */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the image */
+    padding: 2rem; /* Adjust padding */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 60%; /* Set the width to 60% of the container */
+    max-width: 400px; /* Limit max width for larger screens */
+    min-height: 300px; /* Set a minimum height */
+    margin: 1rem auto; /* Center the section */
+    color: #ffffff; /* White text for better contrast */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+    animation: slideIn 0.5s ease forwards; /* Animation for entrance */
+}
+
+/* RSVP Section */
+#rsvp {
+    background-image: url('chair.jpg'); /* Set the chair image as the background */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the image */
+    border-radius: 12px; /* Match the section border radius */
+    padding: 1rem; /* Padding to fit the text */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Slightly reduced shadow */
+    width: 60%; /* Set the width to 60% of the container */
+    max-width: 430px; /* Limit max width for larger screens */
+    min-height: 400px; /* Set a minimum height for more space */
+    margin: 1rem auto; /* Center the section */
+    position: relative; /* For z-index management */
+    color: #ffffff; /* White text for better contrast */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+}
+
+/* Form Elements */
+label {
+    margin: 0.5rem 0;
+    font-weight: bold; /* Make labels stand out */
+    font-size: 1.2em; /* Slightly larger text for labels */
+    color: #ff5722; /* Orange text for labels */
+    animation: fadeIn 0.5s ease forwards; /* Animation for labels */
+}
+
+#rsvp input, #rsvp button,
+#viewGuestList, #clearGuestList, #ninongNinang {
+    color: #333; /* Dark text for inputs and buttons */
+    width: 80%; /* Set a standard width for inputs/buttons */
+    margin: 0.5rem 0; /* Margin for spacing */
+}
+
+button {
+    background-color: #4caf50; /* Green button */
+    color: #ffffff; /* White text */
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2em; /* Slightly larger button text */
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+button:hover {
+    color: #000000; /* Change text color to black on hover */
+}
