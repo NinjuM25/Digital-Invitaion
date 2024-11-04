@@ -71,7 +71,7 @@ section {
     padding: 1rem; /* Padding to fit the text */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Slightly reduced shadow */
     width: 60%; /* Set the width to 60% of the container */
-    max-width: 430px; /* Limit max width for larger screens */
+    max-width: 450px; /* Limit max width for larger screens */
     min-height: 400px; /* Set a minimum height for more space */
     margin: 1rem auto; /* Center the section */
     position: relative; /* For z-index management */
