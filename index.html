@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Christening Invitation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Fullscreen image popup overlay -->
+  <div id="image-popup" class="image-popup-overlay" onclick="closePopup()">
+    <img id="popup-image" src="" alt="Full-screen image">
+  </div>
+
+  <header>
+    <h1>👣 Celebrating A Bright Beginning 👣</h1>
+    <p>We’re thrilled to have you with us for this special day!🧸</p>
+  </header>
+
+  <section id="details" onclick="showPopup('crown.jpg')">
+    <h2>Event Details</h2>
+    <p><strong>Date:</strong> Tuesday, December 30, 2024</p>
+    <p><strong>Time:</strong> 2:00 PM - 5:00 PM</p>
+    <div class="container">
+        <div class="location1">Location: Llaguno Alegado St.,</div>
+		<div class="location2">Brgy. Buanga, Pinili, Ilocos Norte</div>
+    </div>
+  </section>
+
+  <section id="countdown" onclick="showPopup('car-1.jpg')">
+    <h2>Countdown to the Christening!</h2>
+    <div id="timer">Loading...</div>
+  </section>
+
+  <section id="ninong" onclick="showPopup('chair.jpg')">
+    <div class="container">
+      <div class="column">
+        <div class="ninong">
+          <h2>Ninong</h2>
+          <ul>
+            <li>JR</li>
+            <li>Mike Ian</li>
+            <li>Eugen</li>
+            <li>Gilbert</li>
+            <li>Adrix</li>
+            <li>Cyrus</li>
+            <li>Robenson</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ninang" onclick="showPopup('bear.jpg')">
+    <div class="container">
+      <div class="column">
+        <div class="ninang">
+          <h2>Ninang</h2>
+          <ul>
+            <li>Diane</li>
+            <li>Janice</li>
+			<li>Agnes</li>
+            <li>Odeth</li>
+            <li>Marissa</li>
+			<li>Marena</li>
+            <li>Mae Andrea</li>
+            <li>Risa</li>
+            <li>Quizzy Grace</li>
+            <li>Regine</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gcash">
+    <p>If you would like to contribute, you can send your gift via GCash.</p>
+    <!-- GCash payment button -->
+    <button onclick="window.open('https://gcash.com.ph', '_blank')" class="gcash-button">Pay via GCash</button>
+  </section>
+
+  <footer>
+    <p>We can't wait to celebrate with you! 🎉</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
