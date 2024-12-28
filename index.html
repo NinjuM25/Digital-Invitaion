@@ -108,6 +108,8 @@
   <!-- Add the audio elements -->
   <audio id="funny-playful" src="funny-playful.mp3"></audio>
   <audio id="fun-time" src="fun-time.mp3"></audio>
+  <audio id="kids-joy" src="kids-joy.mp3"></audio>
+  <audio id="travel-upbeat" src="travel-upbeat.mp3"></audio>
 
   <script>
     function showPopup(imageSrc) {
@@ -115,6 +117,8 @@
       const popupImage = document.getElementById('popup-image');
       const audioFunny = document.getElementById('funny-playful');
       const audioFunTime = document.getElementById('fun-time');
+      const audioKidsJoy = document.getElementById('kids-joy');
+      const audioTravelUpbeat = document.getElementById('travel-upbeat');
 
       popup.style.display = 'flex'; // Change to flex for centering
       popupImage.src = imageSrc;
@@ -124,13 +128,31 @@
         audioFunny.currentTime = 0; // Reset the audio to the start
         audioFunny.play(); // Play the funny audio
         audioFunTime.pause(); // Pause the other audio
+        audioKidsJoy.pause(); // Pause the other audio
+        audioTravelUpbeat.pause(); // Pause the other audio
       } else if (imageSrc === 'car-1.jpg') {
         audioFunTime.currentTime = 0; // Reset the audio to the start
         audioFunTime.play(); // Play the fun-time audio
         audioFunny.pause(); // Pause the other audio
+        audioKidsJoy.pause(); // Pause the other audio
+        audioTravelUpbeat.pause(); // Pause the other audio
+      } else if (imageSrc === 'chair.jpg') {
+        audioKidsJoy.currentTime = 0; // Reset the audio to the start
+        audioKidsJoy.play(); // Play the kids-joy audio
+        audioFunny.pause(); // Pause the other audio
+        audioFunTime.pause(); // Pause the other audio
+        audioTravelUpbeat.pause(); // Pause the other audio
+      } else if (imageSrc === 'bear.jpg') {
+        audioTravelUpbeat.currentTime = 0; // Reset the audio to the start
+        audioTravelUpbeat.play(); // Play the travel-upbeat audio
+        audioFunny.pause(); // Pause the other audio
+        audioFunTime.pause(); // Pause the other audio
+        audioKidsJoy.pause(); // Pause the other audio
       } else {
         audioFunny.pause(); // Pause any audio if it's not one of the specified images
         audioFunTime.pause();
+        audioKidsJoy.pause();
+        audioTravelUpbeat.pause();
       }
     }
 
@@ -138,6 +160,8 @@
       const popup = document.getElementById('image-popup');
       const audioFunny = document.getElementById('funny-playful');
       const audioFunTime = document.getElementById('fun-time');
+      const audioKidsJoy = document.getElementById('kids-joy');
+      const audioTravelUpbeat = document.getElementById('travel-upbeat');
 
       popup.style.display = 'none';
 
@@ -145,7 +169,11 @@
       audioFunny.pause();
       audioFunny.currentTime = 0; // Reset the audio to the start
       audioFunTime.pause();
-      audioFunTime.currentTime = 0; // Reset the other audio to the start
+      audioFunTime.currentTime = 0; // Reset the audio to the start
+      audioKidsJoy.pause();
+      audioKidsJoy.currentTime = 0; // Reset the audio to the start
+      audioTravelUpbeat.pause();
+      audioTravelUpbeat.currentTime = 0; // Reset the audio to the start
     }
 
     // Countdown Timer Logic
