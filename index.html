@@ -22,8 +22,8 @@
     <p><strong>Date:</strong> Tuesday, December 30, 2024</p>
     <p><strong>Time:</strong> 2:00 PM - 5:00 PM</p>
     <div class="container">
-        <div class="location1">Location: Llaguno Alegado St.,</div>
-        <div class="location2">Brgy. Buanga, Pinili, Ilocos Norte</div>
+      <div class="location1">Location: Llaguno Alegado St.,</div>
+      <div class="location2">Brgy. Buanga, Pinili, Ilocos Norte</div>
     </div>
   </section>
 
@@ -89,7 +89,7 @@
     function showPopup(imageSrc) {
       const popup = document.getElementById('image-popup');
       const popupImage = document.getElementById('popup-image');
-      const audio = document.getElementById('funny-playful');
+      const audio = document.getElementById('funny-playful-music'); // Correct ID
 
       popup.style.display = 'block';
       popupImage.src = imageSrc;
@@ -103,12 +103,13 @@
 
     function closePopup() {
       const popup = document.getElementById('image-popup');
-      const audio = document.getElementById('funny-playful-music');
+      const audio = document.getElementById('funny-playful-music'); // Correct ID
 
       popup.style.display = 'none';
 
       // Pause the music when the popup is closed
       audio.pause();
+      audio.currentTime = 0; // Reset the audio to the start
     }
   </script>
 </body>
