@@ -5,6 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Digital Christening Invitation</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Style for the popup overlay */
+    .image-popup-overlay {
+      display: none; /* Initially hidden */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+      justify-content: center;
+      align-items: center;
+      z-index: 1000; /* Ensure it appears above other content */
+      text-align: center;
+    }
+
+    /* Style for the popup image */
+    #popup-image {
+      max-width: 90%; /* Limit the image size */
+      max-height: 90%; /* Limit the image size */
+      object-fit: contain; /* Maintain aspect ratio */
+    }
+  </style>
 </head>
 <body>
   <!-- Fullscreen image popup overlay -->
@@ -91,7 +114,7 @@
       const popupImage = document.getElementById('popup-image');
       const audio = document.getElementById('funny-playful');
 
-      popup.style.display = 'block';
+      popup.style.display = 'flex'; // Change to flex for centering
       popupImage.src = imageSrc;
 
       // Play the song if the tapped image is crown.jpg
