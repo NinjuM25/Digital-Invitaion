@@ -89,7 +89,7 @@
     function showPopup(imageSrc) {
       const popup = document.getElementById('image-popup');
       const popupImage = document.getElementById('popup-image');
-      const audio = document.getElementById('funny-playful'); // Correct ID
+      const audio = document.getElementById('funny-playful');
 
       popup.style.display = 'block';
       popupImage.src = imageSrc;
@@ -103,7 +103,7 @@
 
     function closePopup() {
       const popup = document.getElementById('image-popup');
-      const audio = document.getElementById('funny-playful'); // Correct ID
+      const audio = document.getElementById('funny-playful');
 
       popup.style.display = 'none';
 
@@ -111,6 +111,34 @@
       audio.pause();
       audio.currentTime = 0; // Reset the audio to the start
     }
+
+    // Countdown Timer Logic
+    function startCountdown() {
+      const eventDate = new Date('December 30, 2024 14:00:00').getTime();
+
+      function updateTimer() {
+        const now = new Date().getTime();
+        const timeLeft = eventDate - now;
+
+        if (timeLeft > 0) {
+          const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+          document.getElementById('timer').innerHTML = `
+            ${days}d ${hours}h ${minutes}m ${seconds}s
+          `;
+        } else {
+          document.getElementById('timer').innerHTML = 'The event has started!';
+        }
+      }
+
+      setInterval(updateTimer, 1000);
+    }
+
+    // Start the countdown when the page loads
+    window.onload = startCountdown;
   </script>
 </body>
 </html>
